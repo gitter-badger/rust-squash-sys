@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `SquashStream` struct in crate `squash_sys`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, SquashStream">
+
+    <title>squash_sys::SquashStream - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='index.html'>squash_sys</a></p><script>window.sidebarCurrent = {name: 'SquashStream', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content struct">
+<h1 class='fqn'><span class='in-band'>Struct <a href='index.html'>squash_sys</a>::<wbr><a class='struct' href=''>SquashStream</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-1217' class='srclink' href='../src/squash_sys/src/stream.rs.html#70-127' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct SquashStream {
+    pub base_object: <a class='struct' href='../squash_sys/struct.SquashObject.html' title='squash_sys::SquashObject'>SquashObject</a>,
+    pub _priv: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='enum' href='../squash_sys/enum.SquashStreamPrivate.html' title='squash_sys::SquashStreamPrivate'>SquashStreamPrivate</a>,
+    pub next_in: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*const </a><a class='type' href='../libc/type.uint8_t.html' title='libc::uint8_t'>uint8_t</a>,
+    pub avail_in: <a class='type' href='../libc/type.size_t.html' title='libc::size_t'>size_t</a>,
+    pub total_in: <a class='type' href='../libc/type.size_t.html' title='libc::size_t'>size_t</a>,
+    pub next_out: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='type' href='../libc/type.uint8_t.html' title='libc::uint8_t'>uint8_t</a>,
+    pub avail_out: <a class='type' href='../libc/type.size_t.html' title='libc::size_t'>size_t</a>,
+    pub total_out: <a class='type' href='../libc/type.size_t.html' title='libc::size_t'>size_t</a>,
+    pub codec: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='enum' href='../squash_sys/enum.SquashCodec.html' title='squash_sys::SquashCodec'>SquashCodec</a>,
+    pub options: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='struct' href='../squash_sys/struct.SquashOptions.html' title='squash_sys::SquashOptions'>SquashOptions</a>,
+    pub stream_type: <a class='enum' href='../squash_sys/enum.SquashStreamType.html' title='squash_sys::SquashStreamType'>SquashStreamType</a>,
+    pub state: <a class='type' href='../squash_sys/type.SquashStreamState.html' title='squash_sys::SquashStreamState'>SquashStreamState</a>,
+    pub user_data: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='enum' href='../libc/enum.c_void.html' title='libc::c_void'>c_void</a>,
+    pub destroy_user_data: <a class='type' href='../squash_sys/type.SquashDestroyNotify.html' title='squash_sys::SquashDestroyNotify'>SquashDestroyNotify</a>,
+}</pre><div class='docblock'><p>Compression/decompression streams.</p>
+</div><h2 class='fields'>Fields</h2>
+<table><tr class='stab '>
+                             <td id='structfield.base_object'><code>base_object</code></td><td><div class='docblock'><p>Base object.</p>
+</div></td></tr><tr class='stab '>
+                             <td id='structfield._priv'><code>_priv</code></td><td><div class='docblock'><p>Private data.</p>
+
+<p>This is managed internally by Squash and should not be modified by
+consumers or plugins.</p>
+</div></td></tr><tr class='stab '>
+                             <td id='structfield.next_in'><code>next_in</code></td><td><div class='docblock'><p>The next input date to consume.</p>
+</div></td></tr><tr class='stab '>
+                             <td id='structfield.avail_in'><code>avail_in</code></td><td><div class='docblock'><p>Size (in bytes) of available input.</p>
+</div></td></tr><tr class='stab '>
+                             <td id='structfield.total_in'><code>total_in</code></td><td><div class='docblock'><p>The total number of bytes input.</p>
+
+<p>This is managed internally by Squash and should not be modified by
+consumers or plugins.</p>
+</div></td></tr><tr class='stab '>
+                             <td id='structfield.next_out'><code>next_out</code></td><td><div class='docblock'><p>The buffer to write output to.</p>
+</div></td></tr><tr class='stab '>
+                             <td id='structfield.avail_out'><code>avail_out</code></td><td><div class='docblock'><p>Number of bytes available in the output buffer.</p>
+</div></td></tr><tr class='stab '>
+                             <td id='structfield.total_out'><code>total_out</code></td><td><div class='docblock'><p>Total number of bytes output.</p>
+
+<p>This is managed internally by Squash and should not be modified by
+consumers or plugins.</p>
+</div></td></tr><tr class='stab '>
+                             <td id='structfield.codec'><code>codec</code></td><td><div class='docblock'><p>Codec used for this stream.</p>
+</div></td></tr><tr class='stab '>
+                             <td id='structfield.options'><code>options</code></td><td><div class='docblock'><p>Options used for this stream.</p>
+</div></td></tr><tr class='stab '>
+                             <td id='structfield.stream_type'><code>stream_type</code></td><td><div class='docblock'><p>Stream type.</p>
+</div></td></tr><tr class='stab '>
+                             <td id='structfield.state'><code>state</code></td><td><div class='docblock'><p>State the stream is in.</p>
+
+<p>This is managed internally by Squash and should not be modified by
+consumers or plugins.</p>
+</div></td></tr><tr class='stab '>
+                             <td id='structfield.user_data'><code>user_data</code></td><td><div class='docblock'><p>User data.</p>
+
+<p>Note that this is for consumers of the library, not for plugins. It
+should be safe to use this from your application.</p>
+</div></td></tr><tr class='stab '>
+                             <td id='structfield.destroy_user_data'><code>destroy_user_data</code></td><td><div class='docblock'><p>Callback to invoke on <code>user_data</code> when it is no longer necessary.</p>
+</div></td></tr></table></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "squash_sys";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../jquery.js"></script>
+    <script src="../main.js"></script>
+    
+    <script defer src="../search-index.js"></script>
+</body>
+</html>

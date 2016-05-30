@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `SquashCodecImpl` struct in crate `squash_sys`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, SquashCodecImpl">
+
+    <title>squash_sys::SquashCodecImpl - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='index.html'>squash_sys</a></p><script>window.sidebarCurrent = {name: 'SquashCodecImpl', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content struct">
+<h1 class='fqn'><span class='in-band'>Struct <a href='index.html'>squash_sys</a>::<wbr><a class='struct' href=''>SquashCodecImpl</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-299' class='srclink' href='../src/squash_sys/src/codec.rs.html#78-237' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct SquashCodecImpl {
+    pub info: <a class='struct' href='../squash_sys/struct.SquashCodecInfo.html' title='squash_sys::SquashCodecInfo'>SquashCodecInfo</a>,
+    pub options: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*const </a><a class='struct' href='../squash_sys/struct.SquashOptionInfo.html' title='squash_sys::SquashOptionInfo'>SquashOptionInfo</a>,
+    pub create_stream: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt; extern "C" fn(codec: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='enum' href='../squash_sys/enum.SquashCodec.html' title='squash_sys::SquashCodec'>SquashCodec</a>, stream_type: <a class='enum' href='../squash_sys/enum.SquashStreamType.html' title='squash_sys::SquashStreamType'>SquashStreamType</a>, options: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='struct' href='../squash_sys/struct.SquashOptions.html' title='squash_sys::SquashOptions'>SquashOptions</a>) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='struct' href='../squash_sys/struct.SquashStream.html' title='squash_sys::SquashStream'>SquashStream</a>&gt;,
+    pub process_stream: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt; extern "C" fn(stream: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='struct' href='../squash_sys/struct.SquashStream.html' title='squash_sys::SquashStream'>SquashStream</a>, operation: <a class='enum' href='../squash_sys/enum.SquashOperation.html' title='squash_sys::SquashOperation'>SquashOperation</a>) -&gt; <a class='type' href='../squash_sys/type.SquashStatus.html' title='squash_sys::SquashStatus'>SquashStatus</a>&gt;,
+    pub splice: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt; extern "C" fn(codec: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='enum' href='../squash_sys/enum.SquashCodec.html' title='squash_sys::SquashCodec'>SquashCodec</a>, options: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='struct' href='../squash_sys/struct.SquashOptions.html' title='squash_sys::SquashOptions'>SquashOptions</a>, stream_type: <a class='enum' href='../squash_sys/enum.SquashStreamType.html' title='squash_sys::SquashStreamType'>SquashStreamType</a>, read_cb: <a class='type' href='../squash_sys/type.SquashReadFunc.html' title='squash_sys::SquashReadFunc'>SquashReadFunc</a>, write_cb: <a class='type' href='../squash_sys/type.SquashWriteFunc.html' title='squash_sys::SquashWriteFunc'>SquashWriteFunc</a>, user_data: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='enum' href='../libc/enum.c_void.html' title='libc::c_void'>c_void</a>) -&gt; <a class='type' href='../squash_sys/type.SquashStatus.html' title='squash_sys::SquashStatus'>SquashStatus</a>&gt;,
+    pub decompress_buffer: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt; extern "C" fn(codec: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='enum' href='../squash_sys/enum.SquashCodec.html' title='squash_sys::SquashCodec'>SquashCodec</a>, decompressed_size: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='type' href='../libc/type.size_t.html' title='libc::size_t'>size_t</a>, decompressed: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='type' href='../libc/type.uint8_t.html' title='libc::uint8_t'>uint8_t</a>, compressed_size: <a class='type' href='../libc/type.size_t.html' title='libc::size_t'>size_t</a>, compressed: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*const </a><a class='type' href='../libc/type.uint8_t.html' title='libc::uint8_t'>uint8_t</a>, options: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='struct' href='../squash_sys/struct.SquashOptions.html' title='squash_sys::SquashOptions'>SquashOptions</a>) -&gt; <a class='type' href='../squash_sys/type.SquashStatus.html' title='squash_sys::SquashStatus'>SquashStatus</a>&gt;,
+    pub compress_buffer: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt; extern "C" fn(codec: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='enum' href='../squash_sys/enum.SquashCodec.html' title='squash_sys::SquashCodec'>SquashCodec</a>, compressed_size: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='type' href='../libc/type.size_t.html' title='libc::size_t'>size_t</a>, compressed: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='type' href='../libc/type.uint8_t.html' title='libc::uint8_t'>uint8_t</a>, uncompressed_size: <a class='type' href='../libc/type.size_t.html' title='libc::size_t'>size_t</a>, uncompressed: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*const </a><a class='type' href='../libc/type.uint8_t.html' title='libc::uint8_t'>uint8_t</a>, options: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='struct' href='../squash_sys/struct.SquashOptions.html' title='squash_sys::SquashOptions'>SquashOptions</a>) -&gt; <a class='type' href='../squash_sys/type.SquashStatus.html' title='squash_sys::SquashStatus'>SquashStatus</a>&gt;,
+    pub compress_buffer_unsafe: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt; extern "C" fn(codec: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='enum' href='../squash_sys/enum.SquashCodec.html' title='squash_sys::SquashCodec'>SquashCodec</a>, compressed_size: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='type' href='../libc/type.size_t.html' title='libc::size_t'>size_t</a>, compressed: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='type' href='../libc/type.uint8_t.html' title='libc::uint8_t'>uint8_t</a>, uncompressed_size: <a class='type' href='../libc/type.size_t.html' title='libc::size_t'>size_t</a>, uncompressed: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*const </a><a class='type' href='../libc/type.uint8_t.html' title='libc::uint8_t'>uint8_t</a>, options: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='struct' href='../squash_sys/struct.SquashOptions.html' title='squash_sys::SquashOptions'>SquashOptions</a>) -&gt; <a class='type' href='../squash_sys/type.SquashStatus.html' title='squash_sys::SquashStatus'>SquashStatus</a>&gt;,
+    pub get_uncompressed_size: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt; extern "C" fn(codec: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='enum' href='../squash_sys/enum.SquashCodec.html' title='squash_sys::SquashCodec'>SquashCodec</a>, compressed_size: <a class='type' href='../libc/type.size_t.html' title='libc::size_t'>size_t</a>, compressed: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*const </a><a class='type' href='../libc/type.uint8_t.html' title='libc::uint8_t'>uint8_t</a>) -&gt; <a class='type' href='../libc/type.size_t.html' title='libc::size_t'>size_t</a>&gt;,
+    pub get_max_compressed_size: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt; extern "C" fn(codec: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='enum' href='../squash_sys/enum.SquashCodec.html' title='squash_sys::SquashCodec'>SquashCodec</a>, uncompressed_size: <a class='type' href='../libc/type.size_t.html' title='libc::size_t'>size_t</a>) -&gt; <a class='type' href='../libc/type.size_t.html' title='libc::size_t'>size_t</a>&gt;,
+    pub _reserved1: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt; extern "C" fn()&gt;,
+    pub _reserved2: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt; extern "C" fn()&gt;,
+    pub _reserved3: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt; extern "C" fn()&gt;,
+    pub _reserved4: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt; extern "C" fn()&gt;,
+    pub _reserved5: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt; extern "C" fn()&gt;,
+    pub _reserved6: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt; extern "C" fn()&gt;,
+    pub _reserved7: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt; extern "C" fn()&gt;,
+    pub _reserved8: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt; extern "C" fn()&gt;,
+}</pre><div class='docblock'><p>Function table for plugins.</p>
+
+<p>This struct should only be used from within a plugin.</p>
+
+<p>This structure may grow over time to accomodate new features, so when
+setting up the callbacks in a plugin you must set each field individually
+instead of copying an entire instance of the struct.</p>
+</div><h2 class='fields'>Fields</h2>
+<table><tr class='stab '>
+                             <td id='structfield.info'><code>info</code></td><td><div class='docblock'><p>Capability information about the codec.</p>
+</div></td></tr><tr class='stab '>
+                             <td id='structfield.options'><code>options</code></td><td><div class='docblock'><p>options which may bo passed to the codec to modify its operation</p>
+</div></td></tr><tr class='stab '>
+                             <td id='structfield.create_stream'><code>create_stream</code></td><td><div class='docblock'><p>Create a new SquashStream.</p>
+
+<h1 id='parameters' class='section-header'><a href='#parameters'>Parameters</a></h1>
+<ul>
+<li><code>codec</code> The codec.</li>
+<li><code>stream_type</code> The type of stream to create.</li>
+<li><code>options</code> The stream options.</li>
+</ul>
+
+<h1 id='returns' class='section-header'><a href='#returns'>Returns</a></h1>
+<p>A new SquashStream.</p>
+</div></td></tr><tr class='stab '>
+                             <td id='structfield.process_stream'><code>process_stream</code></td><td><div class='docblock'><p>Process a SquashStream.</p>
+
+<h1 id='parameters-1' class='section-header'><a href='#parameters-1'>Parameters</a></h1>
+<ul>
+<li><code>stream</code> The stream.</li>
+<li><code>operation</code> The operation to perform.</li>
+</ul>
+
+<h1 id='returns-1' class='section-header'><a href='#returns-1'>Returns</a></h1>
+<p>A status code.</p>
+</div></td></tr><tr class='stab '>
+                             <td id='structfield.splice'><code>splice</code></td><td><div class='docblock'><p>Splice.</p>
+
+<h1 id='parameters-2' class='section-header'><a href='#parameters-2'>Parameters</a></h1>
+<ul>
+<li><code>options</code> Options to use</li>
+<li><code>stream_type</code> Whether to compress or decompress</li>
+<li><code>read_cb</code> Callback to use to read data</li>
+<li><code>write_cb</code> Callback to use to write data</li>
+<li><code>user_data</code> Date to pass to the callbacks</li>
+</ul>
+
+<h1 id='returns-2' class='section-header'><a href='#returns-2'>Returns</a></h1>
+<p>A status code</p>
+</div></td></tr><tr class='stab '>
+                             <td id='structfield.decompress_buffer'><code>decompress_buffer</code></td><td><div class='docblock'><p>Decompress a buffer.</p>
+
+<h1 id='parameters-3' class='section-header'><a href='#parameters-3'>Parameters</a></h1>
+<ul>
+<li><code>codec</code> The codec.</li>
+<li><code>compressed</code> The compressed data.</li>
+<li><code>compressed_size</code> Size of the compressed data.</li>
+<li><code>uncompressed</code> Buffer in which to store the uncompressed data.</li>
+<li><code>uncompressed_size</code> Location of the buffer size on input, used
+to store the size of the uncompressed data on output.</li>
+<li><code>options</code> Decompression options (or NULL)</li>
+</ul>
+</div></td></tr><tr class='stab '>
+                             <td id='structfield.compress_buffer'><code>compress_buffer</code></td><td><div class='docblock'><p>Compress a buffer.</p>
+
+<h1 id='parameters-4' class='section-header'><a href='#parameters-4'>Parameters</a></h1>
+<ul>
+<li><code>codec</code> The codec.</li>
+<li><code>uncompressed</code> The uncompressed data.</li>
+<li><code>uncompressed_size</code> The size of the uncompressed data.</li>
+<li><code>compressed</code> Buffer in which to store the compressed data.</li>
+<li><code>compressed_size</code> Location of the buffer size on input, used to store
+the size of the compressed data on output.</li>
+<li><code>options</code> Compression options (or NULL)</li>
+</ul>
+</div></td></tr><tr class='stab '>
+                             <td id='structfield.compress_buffer_unsafe'><code>compress_buffer_unsafe</code></td><td><div class='docblock'><p>Compress a buffer.</p>
+
+<p>Plugins implementing this function can be sure that compressed is at
+least as long as the maximum compressed size for a buffer of
+uncompressed_size bytes.</p>
+
+<h1 id='parameters-5' class='section-header'><a href='#parameters-5'>Parameters</a></h1>
+<ul>
+<li><code>codec</code> The codec.</li>
+<li><code>uncompressed</code> The uncompressed data.</li>
+<li><code>uncompressed_size</code> The size of the uncompressed data.</li>
+<li><code>compressed</code> Buffer in which to store the compressed data.</li>
+<li><code>compressed_size</code> Location of the buffer size on input, used to store
+the size of the compressed data on output.</li>
+<li><code>options</code> Compression options (or NULL)</li>
+</ul>
+</div></td></tr><tr class='stab '>
+                             <td id='structfield.get_uncompressed_size'><code>get_uncompressed_size</code></td><td><div class='docblock'><p>Get the buffer&#39;s uncompressed size.</p>
+
+<h1 id='parameters-6' class='section-header'><a href='#parameters-6'>Parameters</a></h1>
+<ul>
+<li><code>codec</code> The codec.</li>
+<li><code>compressed</code> Compressed data.</li>
+<li><code>compressed_size</code> Size of compressed data (in bytes).</li>
+</ul>
+
+<h1 id='returns-3' class='section-header'><a href='#returns-3'>Returns</a></h1>
+<p>Size of the uncompressed data, or 0 if unknown.</p>
+</div></td></tr><tr class='stab '>
+                             <td id='structfield.get_max_compressed_size'><code>get_max_compressed_size</code></td><td><div class='docblock'><p>Get the maximum compressed size.</p>
+
+<h1 id='parameters-7' class='section-header'><a href='#parameters-7'>Parameters</a></h1>
+<ul>
+<li><code>codec</code> The codec.</li>
+<li><code>uncompressed_size</code> Size of the uncompressed data.</li>
+</ul>
+
+<h1 id='returns-4' class='section-header'><a href='#returns-4'>Returns</a></h1>
+<p>The maximum buffer size necessary to contain the compressed data.</p>
+</div></td></tr><tr class='stab '>
+                             <td id='structfield._reserved1'><code>_reserved1</code></td><td><div class='docblock'><p>Reserved for future use.</p>
+</div></td></tr><tr class='stab '>
+                             <td id='structfield._reserved2'><code>_reserved2</code></td><td><div class='docblock'><p>Reserved for future use.</p>
+</div></td></tr><tr class='stab '>
+                             <td id='structfield._reserved3'><code>_reserved3</code></td><td><div class='docblock'><p>Reserved for future use.</p>
+</div></td></tr><tr class='stab '>
+                             <td id='structfield._reserved4'><code>_reserved4</code></td><td><div class='docblock'><p>Reserved for future use.</p>
+</div></td></tr><tr class='stab '>
+                             <td id='structfield._reserved5'><code>_reserved5</code></td><td><div class='docblock'><p>Reserved for future use.</p>
+</div></td></tr><tr class='stab '>
+                             <td id='structfield._reserved6'><code>_reserved6</code></td><td><div class='docblock'><p>Reserved for future use.</p>
+</div></td></tr><tr class='stab '>
+                             <td id='structfield._reserved7'><code>_reserved7</code></td><td><div class='docblock'><p>Reserved for future use.</p>
+</div></td></tr><tr class='stab '>
+                             <td id='structfield._reserved8'><code>_reserved8</code></td><td><div class='docblock'><p>Reserved for future use.</p>
+</div></td></tr></table><h2 id='implementations'>Trait Implementations</h2><h3 id='derived_implementations'>Derived Implementations </h3><h3 class='impl'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html' title='core::clone::Clone'>Clone</a> for <a class='struct' href='../squash_sys/struct.SquashCodecImpl.html' title='squash_sys::SquashCodecImpl'>SquashCodecImpl</a></code></h3><div class='impl-items'><h4 id='method.clone' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone' class='fnname'>clone</a>(&amp;self) -&gt; <a class='struct' href='../squash_sys/struct.SquashCodecImpl.html' title='squash_sys::SquashCodecImpl'>SquashCodecImpl</a></code></h4>
+<h4 id='method.clone_from' class='method'><span class="since">1.0.0</span><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from' class='fnname'>clone_from</a>(&amp;mut self, source: &amp;Self)</code></h4>
+</div><h3 class='impl'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Copy.html' title='core::marker::Copy'>Copy</a> for <a class='struct' href='../squash_sys/struct.SquashCodecImpl.html' title='squash_sys::SquashCodecImpl'>SquashCodecImpl</a></code></h3><div class='impl-items'></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "squash_sys";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../jquery.js"></script>
+    <script src="../main.js"></script>
+    
+    <script defer src="../search-index.js"></script>
+</body>
+</html>

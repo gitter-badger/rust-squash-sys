@@ -1,0 +1,1 @@
+initSidebarItems({"fn":[["squash_aligned_alloc","Allocate an aligned buffer"],["squash_aligned_free","Deallocate an aligned buffer"],["squash_calloc",""],["squash_free",""],["squash_malloc",""],["squash_realloc",""],["squash_set_memory_functions","Set memory management functions"]],"struct":[["SquashMemoryFuncs",""]]});

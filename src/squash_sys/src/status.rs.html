@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="Source to the Rust file `src/status.rs`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang">
+
+    <title>status.rs.html -- source</title>
+
+    <link rel="stylesheet" type="text/css" href="../../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content source"><pre class="line-numbers"><span id="1"> 1</span>
+<span id="2"> 2</span>
+<span id="3"> 3</span>
+<span id="4"> 4</span>
+<span id="5"> 5</span>
+<span id="6"> 6</span>
+<span id="7"> 7</span>
+<span id="8"> 8</span>
+<span id="9"> 9</span>
+<span id="10">10</span>
+<span id="11">11</span>
+<span id="12">12</span>
+<span id="13">13</span>
+<span id="14">14</span>
+<span id="15">15</span>
+<span id="16">16</span>
+<span id="17">17</span>
+<span id="18">18</span>
+<span id="19">19</span>
+<span id="20">20</span>
+<span id="21">21</span>
+<span id="22">22</span>
+<span id="23">23</span>
+<span id="24">24</span>
+<span id="25">25</span>
+<span id="26">26</span>
+<span id="27">27</span>
+<span id="28">28</span>
+<span id="29">29</span>
+<span id="30">30</span>
+<span id="31">31</span>
+<span id="32">32</span>
+<span id="33">33</span>
+<span id="34">34</span>
+<span id="35">35</span>
+<span id="36">36</span>
+<span id="37">37</span>
+<span id="38">38</span>
+<span id="39">39</span>
+<span id="40">40</span>
+<span id="41">41</span>
+<span id="42">42</span>
+<span id="43">43</span>
+<span id="44">44</span>
+<span id="45">45</span>
+<span id="46">46</span>
+<span id="47">47</span>
+<span id="48">48</span>
+<span id="49">49</span>
+<span id="50">50</span>
+<span id="51">51</span>
+<span id="52">52</span>
+<span id="53">53</span>
+<span id="54">54</span>
+<span id="55">55</span>
+<span id="56">56</span>
+<span id="57">57</span>
+<span id="58">58</span>
+<span id="59">59</span>
+<span id="60">60</span>
+<span id="61">61</span>
+<span id="62">62</span>
+<span id="63">63</span>
+<span id="64">64</span>
+<span id="65">65</span>
+<span id="66">66</span>
+<span id="67">67</span>
+<span id="68">68</span>
+<span id="69">69</span>
+<span id="70">70</span>
+<span id="71">71</span>
+<span id="72">72</span>
+<span id="73">73</span>
+<span id="74">74</span>
+<span id="75">75</span>
+</pre><pre class='rust '>
+<span class='kw'>use</span> <span class='ident'>libc</span>::{<span class='ident'>c_char</span>, <span class='ident'>c_int</span>};
+
+<span class='doccomment'>/// Response status codes.</span>
+<span class='kw'>pub</span> <span class='kw'>type</span> <span class='ident'>SquashStatus</span> <span class='op'>=</span> <span class='ident'>c_int</span>;
+
+<span class='doccomment'>/// Operation completed successfully.</span>
+<span class='kw'>pub</span> <span class='kw'>const</span> <span class='ident'>SQUASH_OK</span>: <span class='ident'>SquashStatus</span>                    <span class='op'>=</span>  <span class='number'>1</span>;
+<span class='doccomment'>/// Operation partially completed.</span>
+<span class='kw'>pub</span> <span class='kw'>const</span> <span class='ident'>SQUASH_PROCESSING</span>: <span class='ident'>SquashStatus</span>            <span class='op'>=</span>  <span class='number'>2</span>;
+<span class='doccomment'>/// Reached the end of the stream while decoding.</span>
+<span class='kw'>pub</span> <span class='kw'>const</span> <span class='ident'>SQUASH_END_OF_STREAM</span>: <span class='ident'>SquashStatus</span>         <span class='op'>=</span>  <span class='number'>3</span>;
+<span class='doccomment'>/// Operation failed.</span>
+<span class='kw'>pub</span> <span class='kw'>const</span> <span class='ident'>SQUASH_FAILED</span>: <span class='ident'>SquashStatus</span>                <span class='op'>=</span> <span class='op'>-</span><span class='number'>1</span>;
+<span class='doccomment'>/// Unable to load the requested resource.</span>
+<span class='kw'>pub</span> <span class='kw'>const</span> <span class='ident'>SQUASH_UNABLE_TO_LOAD</span>: <span class='ident'>SquashStatus</span>        <span class='op'>=</span> <span class='op'>-</span><span class='number'>2</span>;
+<span class='doccomment'>/// One or more of the parameters were not valid.</span>
+<span class='kw'>pub</span> <span class='kw'>const</span> <span class='ident'>SQUASH_BAD_PARAM</span>: <span class='ident'>SquashStatus</span>             <span class='op'>=</span> <span class='op'>-</span><span class='number'>3</span>;
+<span class='doccomment'>/// One or more parameter values was not valid.</span>
+<span class='kw'>pub</span> <span class='kw'>const</span> <span class='ident'>SQUASH_BAD_VALUE</span>: <span class='ident'>SquashStatus</span>             <span class='op'>=</span> <span class='op'>-</span><span class='number'>4</span>;
+<span class='doccomment'>/// Not enough memory is available.</span>
+<span class='kw'>pub</span> <span class='kw'>const</span> <span class='ident'>SQUASH_MEMORY</span>: <span class='ident'>SquashStatus</span>                <span class='op'>=</span> <span class='op'>-</span><span class='number'>5</span>;
+<span class='doccomment'>/// Insufficient space in buffer.</span>
+<span class='kw'>pub</span> <span class='kw'>const</span> <span class='ident'>SQUASH_BUFFER_FULL</span>: <span class='ident'>SquashStatus</span>           <span class='op'>=</span> <span class='op'>-</span><span class='number'>6</span>;
+<span class='doccomment'>/// Supplied buffer was empty.</span>
+<span class='kw'>pub</span> <span class='kw'>const</span> <span class='ident'>SQUASH_BUFFER_EMPTY</span>: <span class='ident'>SquashStatus</span>          <span class='op'>=</span> <span class='op'>-</span><span class='number'>7</span>;
+<span class='doccomment'>/// Performing the requested operation from the current state is not supported.</span>
+<span class='kw'>pub</span> <span class='kw'>const</span> <span class='ident'>SQUASH_STATE</span>: <span class='ident'>SquashStatus</span>                 <span class='op'>=</span> <span class='op'>-</span><span class='number'>8</span>;
+<span class='doccomment'>/// The requested operation is not available.</span>
+<span class='kw'>pub</span> <span class='kw'>const</span> <span class='ident'>SQUASH_INVALID_OPERATION</span>: <span class='ident'>SquashStatus</span>     <span class='op'>=</span> <span class='op'>-</span><span class='number'>9</span>;
+<span class='doccomment'>/// The requested codec could not be found.</span>
+<span class='kw'>pub</span> <span class='kw'>const</span> <span class='ident'>SQUASH_NOT_FOUND</span>: <span class='ident'>SquashStatus</span>             <span class='op'>=</span> <span class='op'>-</span><span class='number'>10</span>;
+<span class='doccomment'>/// A buffer passed to squash was invalid.</span>
+<span class='kw'>pub</span> <span class='kw'>const</span> <span class='ident'>SQUASH_INVALID_BUFFER</span>: <span class='ident'>SquashStatus</span>        <span class='op'>=</span> <span class='op'>-</span><span class='number'>11</span>;
+<span class='doccomment'>/// An input/output error occurred.</span>
+<span class='doccomment'>///</span>
+<span class='doccomment'>/// There is a good chance errno will have additional details, though it</span>
+<span class='doccomment'>/// is not guaranteed.</span>
+<span class='kw'>pub</span> <span class='kw'>const</span> <span class='ident'>SQUASH_IO</span>: <span class='ident'>SquashStatus</span>                    <span class='op'>=</span> <span class='op'>-</span><span class='number'>12</span>;
+<span class='doccomment'>/// A buffer was too large to be usable.</span>
+<span class='doccomment'>///</span>
+<span class='doccomment'>/// While Squash uses size_t for buffer sizes, not all libraries used by</span>
+<span class='doccomment'>/// plugins do. Many use int, long, unsigned int, etc., which may be smaller</span>
+<span class='doccomment'>/// than size_t (or, less likely, larger).</span>
+<span class='doccomment'>///</span>
+<span class='doccomment'>/// In the event that converting a value between representations is not</span>
+<span class='doccomment'>/// possible, `SQUASH_RANGE` will be returned.</span>
+<span class='kw'>pub</span> <span class='kw'>const</span> <span class='ident'>SQUASH_RANGE</span>: <span class='ident'>SquashStatus</span>                 <span class='op'>=</span> <span class='op'>-</span><span class='number'>13</span>;
+
+<span class='kw'>extern</span> {
+    <span class='doccomment'>/// Get a string representation of a status code.</span>
+    <span class='doccomment'>///</span>
+    <span class='doccomment'>/// # Parameters</span>
+    <span class='doccomment'>/// * `status` The status.</span>
+    <span class='doccomment'>///</span>
+    <span class='doccomment'>/// # Returns</span>
+    <span class='doccomment'>/// A string describing status</span>
+    <span class='kw'>pub</span> <span class='kw'>fn</span> <span class='ident'>squash_status_to_string</span>(<span class='ident'>status</span>: <span class='ident'>SquashStatus</span>) <span class='op'>-&gt;</span> <span class='op'>*</span><span class='kw'>const</span> <span class='ident'>c_char</span>;
+
+    <span class='doccomment'>/// Emit an error.</span>
+    <span class='doccomment'>///</span>
+    <span class='doccomment'>/// This function simply returns the argument which was passed to it. It</span>
+    <span class='doccomment'>/// exists only to make it easier to debug an error by setting a</span>
+    <span class='doccomment'>/// breakpoint on this function.</span>
+    <span class='doccomment'>///</span>
+    <span class='doccomment'>/// Note that only the initial point at which the error was generated</span>
+    <span class='doccomment'>/// should call this function. Do not call it when simply returning an</span>
+    <span class='doccomment'>/// error that was generated by another function.</span>
+    <span class='doccomment'>///</span>
+    <span class='doccomment'>/// # Parameters</span>
+    <span class='doccomment'>/// * `status` the error</span>
+    <span class='doccomment'>///</span>
+    <span class='doccomment'>/// # Returns</span>
+    <span class='doccomment'>/// the error</span>
+    <span class='kw'>pub</span> <span class='kw'>fn</span> <span class='ident'>squash_error</span>(<span class='ident'>status</span>: <span class='ident'>SquashStatus</span>) <span class='op'>-&gt;</span> <span class='ident'>SquashStatus</span>;
+}
+</pre>
+</section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../../";
+        window.currentCrate = "squash_sys";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../../../jquery.js"></script>
+    <script src="../../../main.js"></script>
+    
+    <script defer src="../../../search-index.js"></script>
+</body>
+</html>

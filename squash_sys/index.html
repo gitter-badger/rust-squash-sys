@@ -1,0 +1,1646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `squash_sys` crate.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, squash_sys">
+
+    <title>squash_sys - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'></p><script>window.sidebarCurrent = {name: 'squash_sys', ty: 'mod', relpath: '../'};</script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content mod">
+<h1 class='fqn'><span class='in-band'>Crate <a class='mod' href=''>squash_sys</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-0' class='srclink' href='../src/squash_sys/src/lib.rs.html#1-32' title='goto source code'>[src]</a></span></h1>
+<h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.SquashCodecImpl.html'
+                                  title='squash_sys::SquashCodecImpl'>SquashCodecImpl</a></td>
+                           <td class='docblock short'>
+                                <p>Function table for plugins.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.SquashCodecInfo.html'
+                                  title='squash_sys::SquashCodecInfo'>SquashCodecInfo</a></td>
+                           <td class='docblock short'>
+                                <p>Information about the codec.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.SquashLicense.html'
+                                  title='squash_sys::SquashLicense'>SquashLicense</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.SquashMemoryFuncs.html'
+                                  title='squash_sys::SquashMemoryFuncs'>SquashMemoryFuncs</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.SquashObject.html'
+                                  title='squash_sys::SquashObject'>SquashObject</a></td>
+                           <td class='docblock short'>
+                                <p>Reference-counting base class for other types.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.SquashOptionInfo.html'
+                                  title='squash_sys::SquashOptionInfo'>SquashOptionInfo</a></td>
+                           <td class='docblock short'>
+                                <p>Information about options which can be passed to a codec.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.SquashOptionInfoEnumInt.html'
+                                  title='squash_sys::SquashOptionInfoEnumInt'>SquashOptionInfoEnumInt</a></td>
+                           <td class='docblock short'>
+                                <p>A list of potential integer values.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.SquashOptionInfoEnumString.html'
+                                  title='squash_sys::SquashOptionInfoEnumString'>SquashOptionInfoEnumString</a></td>
+                           <td class='docblock short'>
+                                <p>A list of strings which are mapped to integer values.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.SquashOptionInfoEnumStringMap.html'
+                                  title='squash_sys::SquashOptionInfoEnumStringMap'>SquashOptionInfoEnumStringMap</a></td>
+                           <td class='docblock short'>
+                                <p>An item in a map of strings to integer values.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.SquashOptionInfoRangeInt.html'
+                                  title='squash_sys::SquashOptionInfoRangeInt'>SquashOptionInfoRangeInt</a></td>
+                           <td class='docblock short'>
+                                <p>A range of potential integer values.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.SquashOptionInfoRangeSize.html'
+                                  title='squash_sys::SquashOptionInfoRangeSize'>SquashOptionInfoRangeSize</a></td>
+                           <td class='docblock short'>
+                                <p>A range of potential size values.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.SquashOptionInfoUnion.html'
+                                  title='squash_sys::SquashOptionInfoUnion'>SquashOptionInfoUnion</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.SquashOptionValue.html'
+                                  title='squash_sys::SquashOptionValue'>SquashOptionValue</a></td>
+                           <td class='docblock short'>
+                                <p>A value.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.SquashOptions.html'
+                                  title='squash_sys::SquashOptions'>SquashOptions</a></td>
+                           <td class='docblock short'>
+                                <p>A set of compression/decompression options.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.SquashStream.html'
+                                  title='squash_sys::SquashStream'>SquashStream</a></td>
+                           <td class='docblock short'>
+                                <p>Compression/decompression streams.</p>
+                           </td>
+                       </tr></table><h2 id='enums' class='section-header'><a href="#enums">Enums</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.SquashCodec.html'
+                                  title='squash_sys::SquashCodec'>SquashCodec</a></td>
+                           <td class='docblock short'>
+                                <p>A compression/decompression codec.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.SquashContext.html'
+                                  title='squash_sys::SquashContext'>SquashContext</a></td>
+                           <td class='docblock short'>
+                                <p>Context for all Squash operations.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.SquashFile.html'
+                                  title='squash_sys::SquashFile'>SquashFile</a></td>
+                           <td class='docblock short'>
+                                <p>stdio-like API and utilities</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.SquashOperation.html'
+                                  title='squash_sys::SquashOperation'>SquashOperation</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.SquashPlugin.html'
+                                  title='squash_sys::SquashPlugin'>SquashPlugin</a></td>
+                           <td class='docblock short'>
+                                <p>A plugin.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.SquashStreamPrivate.html'
+                                  title='squash_sys::SquashStreamPrivate'>SquashStreamPrivate</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.SquashStreamType.html'
+                                  title='squash_sys::SquashStreamType'>SquashStreamType</a></td>
+                           <td class='docblock short'>
+                                <p>Stream type.</p>
+                           </td>
+                       </tr></table><h2 id='constants' class='section-header'><a href="#constants">Constants</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.SQUASH_BAD_PARAM.html'
+                                  title='squash_sys::SQUASH_BAD_PARAM'>SQUASH_BAD_PARAM</a></td>
+                           <td class='docblock short'>
+                                <p>One or more of the parameters were not valid.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.SQUASH_BAD_VALUE.html'
+                                  title='squash_sys::SQUASH_BAD_VALUE'>SQUASH_BAD_VALUE</a></td>
+                           <td class='docblock short'>
+                                <p>One or more parameter values was not valid.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.SQUASH_BUFFER_EMPTY.html'
+                                  title='squash_sys::SQUASH_BUFFER_EMPTY'>SQUASH_BUFFER_EMPTY</a></td>
+                           <td class='docblock short'>
+                                <p>Supplied buffer was empty.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.SQUASH_BUFFER_FULL.html'
+                                  title='squash_sys::SQUASH_BUFFER_FULL'>SQUASH_BUFFER_FULL</a></td>
+                           <td class='docblock short'>
+                                <p>Insufficient space in buffer.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.SQUASH_CODEC_INFO_AUTO_MASK.html'
+                                  title='squash_sys::SQUASH_CODEC_INFO_AUTO_MASK'>SQUASH_CODEC_INFO_AUTO_MASK</a></td>
+                           <td class='docblock short'>
+                                <p>Mask of flags which are automatically set based on
+which callbacks are provided.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.SQUASH_CODEC_INFO_CAN_FLUSH.html'
+                                  title='squash_sys::SQUASH_CODEC_INFO_CAN_FLUSH'>SQUASH_CODEC_INFO_CAN_FLUSH</a></td>
+                           <td class='docblock short'>
+                                <p>Flushing is supported.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.SQUASH_CODEC_INFO_DECOMPRESS_UNSAFE.html'
+                                  title='squash_sys::SQUASH_CODEC_INFO_DECOMPRESS_UNSAFE'>SQUASH_CODEC_INFO_DECOMPRESS_UNSAFE</a></td>
+                           <td class='docblock short'>
+                                <p>The codec is not safe to use when decompressing untrusted data.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.SQUASH_CODEC_INFO_INVALID.html'
+                                  title='squash_sys::SQUASH_CODEC_INFO_INVALID'>SQUASH_CODEC_INFO_INVALID</a></td>
+                           <td class='docblock short'>
+                                <p>Invalid codec.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.SQUASH_CODEC_INFO_KNOWS_UNCOMPRESSED_SIZE.html'
+                                  title='squash_sys::SQUASH_CODEC_INFO_KNOWS_UNCOMPRESSED_SIZE'>SQUASH_CODEC_INFO_KNOWS_UNCOMPRESSED_SIZE</a></td>
+                           <td class='docblock short'>
+                                <p>The compressed data encodes the size of the uncompressed
+data without having to decompress it.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.SQUASH_CODEC_INFO_MASK.html'
+                                  title='squash_sys::SQUASH_CODEC_INFO_MASK'>SQUASH_CODEC_INFO_MASK</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.SQUASH_CODEC_INFO_NATIVE_STREAMING.html'
+                                  title='squash_sys::SQUASH_CODEC_INFO_NATIVE_STREAMING'>SQUASH_CODEC_INFO_NATIVE_STREAMING</a></td>
+                           <td class='docblock short'>
+                                <p>The codec natively supports a streaming interface.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.SQUASH_CODEC_INFO_VALID.html'
+                                  title='squash_sys::SQUASH_CODEC_INFO_VALID'>SQUASH_CODEC_INFO_VALID</a></td>
+                           <td class='docblock short'>
+                                <p>The codec is valid.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.SQUASH_CODEC_INFO_WRAP_SIZE.html'
+                                  title='squash_sys::SQUASH_CODEC_INFO_WRAP_SIZE'>SQUASH_CODEC_INFO_WRAP_SIZE</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.SQUASH_END_OF_STREAM.html'
+                                  title='squash_sys::SQUASH_END_OF_STREAM'>SQUASH_END_OF_STREAM</a></td>
+                           <td class='docblock short'>
+                                <p>Reached the end of the stream while decoding.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.SQUASH_FAILED.html'
+                                  title='squash_sys::SQUASH_FAILED'>SQUASH_FAILED</a></td>
+                           <td class='docblock short'>
+                                <p>Operation failed.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.SQUASH_INVALID_BUFFER.html'
+                                  title='squash_sys::SQUASH_INVALID_BUFFER'>SQUASH_INVALID_BUFFER</a></td>
+                           <td class='docblock short'>
+                                <p>A buffer passed to squash was invalid.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.SQUASH_INVALID_OPERATION.html'
+                                  title='squash_sys::SQUASH_INVALID_OPERATION'>SQUASH_INVALID_OPERATION</a></td>
+                           <td class='docblock short'>
+                                <p>The requested operation is not available.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.SQUASH_IO.html'
+                                  title='squash_sys::SQUASH_IO'>SQUASH_IO</a></td>
+                           <td class='docblock short'>
+                                <p>An input/output error occurred.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.SQUASH_LICENSE_APACHE.html'
+                                  title='squash_sys::SQUASH_LICENSE_APACHE'>SQUASH_LICENSE_APACHE</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.SQUASH_LICENSE_APACHE2.html'
+                                  title='squash_sys::SQUASH_LICENSE_APACHE2'>SQUASH_LICENSE_APACHE2</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.SQUASH_LICENSE_BSD2.html'
+                                  title='squash_sys::SQUASH_LICENSE_BSD2'>SQUASH_LICENSE_BSD2</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.SQUASH_LICENSE_BSD3.html'
+                                  title='squash_sys::SQUASH_LICENSE_BSD3'>SQUASH_LICENSE_BSD3</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.SQUASH_LICENSE_BSD4.html'
+                                  title='squash_sys::SQUASH_LICENSE_BSD4'>SQUASH_LICENSE_BSD4</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.SQUASH_LICENSE_CDDL.html'
+                                  title='squash_sys::SQUASH_LICENSE_CDDL'>SQUASH_LICENSE_CDDL</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.SQUASH_LICENSE_COPYLEFT_INCOMPATIBLE.html'
+                                  title='squash_sys::SQUASH_LICENSE_COPYLEFT_INCOMPATIBLE'>SQUASH_LICENSE_COPYLEFT_INCOMPATIBLE</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.SQUASH_LICENSE_FLAGS_MASK.html'
+                                  title='squash_sys::SQUASH_LICENSE_FLAGS_MASK'>SQUASH_LICENSE_FLAGS_MASK</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.SQUASH_LICENSE_GPL1.html'
+                                  title='squash_sys::SQUASH_LICENSE_GPL1'>SQUASH_LICENSE_GPL1</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.SQUASH_LICENSE_GPL1_PLUS.html'
+                                  title='squash_sys::SQUASH_LICENSE_GPL1_PLUS'>SQUASH_LICENSE_GPL1_PLUS</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.SQUASH_LICENSE_GPL2.html'
+                                  title='squash_sys::SQUASH_LICENSE_GPL2'>SQUASH_LICENSE_GPL2</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.SQUASH_LICENSE_GPL2_PLUS.html'
+                                  title='squash_sys::SQUASH_LICENSE_GPL2_PLUS'>SQUASH_LICENSE_GPL2_PLUS</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.SQUASH_LICENSE_GPL3.html'
+                                  title='squash_sys::SQUASH_LICENSE_GPL3'>SQUASH_LICENSE_GPL3</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.SQUASH_LICENSE_GPL3_PLUS.html'
+                                  title='squash_sys::SQUASH_LICENSE_GPL3_PLUS'>SQUASH_LICENSE_GPL3_PLUS</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.SQUASH_LICENSE_ISC.html'
+                                  title='squash_sys::SQUASH_LICENSE_ISC'>SQUASH_LICENSE_ISC</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.SQUASH_LICENSE_LGPL2P1.html'
+                                  title='squash_sys::SQUASH_LICENSE_LGPL2P1'>SQUASH_LICENSE_LGPL2P1</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.SQUASH_LICENSE_LGPL2P1_PLUS.html'
+                                  title='squash_sys::SQUASH_LICENSE_LGPL2P1_PLUS'>SQUASH_LICENSE_LGPL2P1_PLUS</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.SQUASH_LICENSE_LGPL3.html'
+                                  title='squash_sys::SQUASH_LICENSE_LGPL3'>SQUASH_LICENSE_LGPL3</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.SQUASH_LICENSE_LGPL3_PLUS.html'
+                                  title='squash_sys::SQUASH_LICENSE_LGPL3_PLUS'>SQUASH_LICENSE_LGPL3_PLUS</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.SQUASH_LICENSE_MIT.html'
+                                  title='squash_sys::SQUASH_LICENSE_MIT'>SQUASH_LICENSE_MIT</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.SQUASH_LICENSE_MPL.html'
+                                  title='squash_sys::SQUASH_LICENSE_MPL'>SQUASH_LICENSE_MPL</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.SQUASH_LICENSE_MSPL.html'
+                                  title='squash_sys::SQUASH_LICENSE_MSPL'>SQUASH_LICENSE_MSPL</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.SQUASH_LICENSE_OR_GREATER.html'
+                                  title='squash_sys::SQUASH_LICENSE_OR_GREATER'>SQUASH_LICENSE_OR_GREATER</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.SQUASH_LICENSE_PERMISSIVE.html'
+                                  title='squash_sys::SQUASH_LICENSE_PERMISSIVE'>SQUASH_LICENSE_PERMISSIVE</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.SQUASH_LICENSE_PROPRIETARY.html'
+                                  title='squash_sys::SQUASH_LICENSE_PROPRIETARY'>SQUASH_LICENSE_PROPRIETARY</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.SQUASH_LICENSE_PUBLIC_DOMAIN.html'
+                                  title='squash_sys::SQUASH_LICENSE_PUBLIC_DOMAIN'>SQUASH_LICENSE_PUBLIC_DOMAIN</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.SQUASH_LICENSE_STRONG_COPYLEFT.html'
+                                  title='squash_sys::SQUASH_LICENSE_STRONG_COPYLEFT'>SQUASH_LICENSE_STRONG_COPYLEFT</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.SQUASH_LICENSE_TYPE_MASK.html'
+                                  title='squash_sys::SQUASH_LICENSE_TYPE_MASK'>SQUASH_LICENSE_TYPE_MASK</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.SQUASH_LICENSE_UNKNOWN.html'
+                                  title='squash_sys::SQUASH_LICENSE_UNKNOWN'>SQUASH_LICENSE_UNKNOWN</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.SQUASH_LICENSE_WEAK_COPYLEFT.html'
+                                  title='squash_sys::SQUASH_LICENSE_WEAK_COPYLEFT'>SQUASH_LICENSE_WEAK_COPYLEFT</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.SQUASH_LICENSE_WTFPL.html'
+                                  title='squash_sys::SQUASH_LICENSE_WTFPL'>SQUASH_LICENSE_WTFPL</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.SQUASH_LICENSE_X11.html'
+                                  title='squash_sys::SQUASH_LICENSE_X11'>SQUASH_LICENSE_X11</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.SQUASH_LICENSE_ZLIB.html'
+                                  title='squash_sys::SQUASH_LICENSE_ZLIB'>SQUASH_LICENSE_ZLIB</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.SQUASH_MEMORY.html'
+                                  title='squash_sys::SQUASH_MEMORY'>SQUASH_MEMORY</a></td>
+                           <td class='docblock short'>
+                                <p>Not enough memory is available.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.SQUASH_NOT_FOUND.html'
+                                  title='squash_sys::SQUASH_NOT_FOUND'>SQUASH_NOT_FOUND</a></td>
+                           <td class='docblock short'>
+                                <p>The requested codec could not be found.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.SQUASH_OK.html'
+                                  title='squash_sys::SQUASH_OK'>SQUASH_OK</a></td>
+                           <td class='docblock short'>
+                                <p>Operation completed successfully.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.SQUASH_OPTION_TYPE_BOOL.html'
+                                  title='squash_sys::SQUASH_OPTION_TYPE_BOOL'>SQUASH_OPTION_TYPE_BOOL</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.SQUASH_OPTION_TYPE_ENUM_INT.html'
+                                  title='squash_sys::SQUASH_OPTION_TYPE_ENUM_INT'>SQUASH_OPTION_TYPE_ENUM_INT</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.SQUASH_OPTION_TYPE_ENUM_STRING.html'
+                                  title='squash_sys::SQUASH_OPTION_TYPE_ENUM_STRING'>SQUASH_OPTION_TYPE_ENUM_STRING</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.SQUASH_OPTION_TYPE_INT.html'
+                                  title='squash_sys::SQUASH_OPTION_TYPE_INT'>SQUASH_OPTION_TYPE_INT</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.SQUASH_OPTION_TYPE_NONE.html'
+                                  title='squash_sys::SQUASH_OPTION_TYPE_NONE'>SQUASH_OPTION_TYPE_NONE</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.SQUASH_OPTION_TYPE_RANGE_INT.html'
+                                  title='squash_sys::SQUASH_OPTION_TYPE_RANGE_INT'>SQUASH_OPTION_TYPE_RANGE_INT</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.SQUASH_OPTION_TYPE_RANGE_SIZE.html'
+                                  title='squash_sys::SQUASH_OPTION_TYPE_RANGE_SIZE'>SQUASH_OPTION_TYPE_RANGE_SIZE</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.SQUASH_OPTION_TYPE_SIZE.html'
+                                  title='squash_sys::SQUASH_OPTION_TYPE_SIZE'>SQUASH_OPTION_TYPE_SIZE</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.SQUASH_OPTION_TYPE_STRING.html'
+                                  title='squash_sys::SQUASH_OPTION_TYPE_STRING'>SQUASH_OPTION_TYPE_STRING</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.SQUASH_PROCESSING.html'
+                                  title='squash_sys::SQUASH_PROCESSING'>SQUASH_PROCESSING</a></td>
+                           <td class='docblock short'>
+                                <p>Operation partially completed.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.SQUASH_RANGE.html'
+                                  title='squash_sys::SQUASH_RANGE'>SQUASH_RANGE</a></td>
+                           <td class='docblock short'>
+                                <p>A buffer was too large to be usable.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.SQUASH_SEARCH_PATH_SEPARATOR.html'
+                                  title='squash_sys::SQUASH_SEARCH_PATH_SEPARATOR'>SQUASH_SEARCH_PATH_SEPARATOR</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.SQUASH_SPLICE_BUF_SIZE.html'
+                                  title='squash_sys::SQUASH_SPLICE_BUF_SIZE'>SQUASH_SPLICE_BUF_SIZE</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.SQUASH_STATE.html'
+                                  title='squash_sys::SQUASH_STATE'>SQUASH_STATE</a></td>
+                           <td class='docblock short'>
+                                <p>Performing the requested operation from the current state is not supported.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.SQUASH_STREAM_STATE_FINISHED.html'
+                                  title='squash_sys::SQUASH_STREAM_STATE_FINISHED'>SQUASH_STREAM_STATE_FINISHED</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.SQUASH_STREAM_STATE_FINISHING.html'
+                                  title='squash_sys::SQUASH_STREAM_STATE_FINISHING'>SQUASH_STREAM_STATE_FINISHING</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.SQUASH_STREAM_STATE_FLUSHING.html'
+                                  title='squash_sys::SQUASH_STREAM_STATE_FLUSHING'>SQUASH_STREAM_STATE_FLUSHING</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.SQUASH_STREAM_STATE_IDLE.html'
+                                  title='squash_sys::SQUASH_STREAM_STATE_IDLE'>SQUASH_STREAM_STATE_IDLE</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.SQUASH_STREAM_STATE_RUNNING.html'
+                                  title='squash_sys::SQUASH_STREAM_STATE_RUNNING'>SQUASH_STREAM_STATE_RUNNING</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.SQUASH_UNABLE_TO_LOAD.html'
+                                  title='squash_sys::SQUASH_UNABLE_TO_LOAD'>SQUASH_UNABLE_TO_LOAD</a></td>
+                           <td class='docblock short'>
+                                <p>Unable to load the requested resource.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.SQUASH_VERSION_API.html'
+                                  title='squash_sys::SQUASH_VERSION_API'>SQUASH_VERSION_API</a></td>
+                           <td class='docblock short'>
+                                <p>API version</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.SQUASH_VERSION_CURRENT.html'
+                                  title='squash_sys::SQUASH_VERSION_CURRENT'>SQUASH_VERSION_CURRENT</a></td>
+                           <td class='docblock short'>
+                                <p>Current version, encoded as a single number</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.SQUASH_VERSION_MAJOR.html'
+                                  title='squash_sys::SQUASH_VERSION_MAJOR'>SQUASH_VERSION_MAJOR</a></td>
+                           <td class='docblock short'>
+                                <p>Major version number</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.SQUASH_VERSION_MINOR.html'
+                                  title='squash_sys::SQUASH_VERSION_MINOR'>SQUASH_VERSION_MINOR</a></td>
+                           <td class='docblock short'>
+                                <p>Minor version number</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.SQUASH_VERSION_REVISION.html'
+                                  title='squash_sys::SQUASH_VERSION_REVISION'>SQUASH_VERSION_REVISION</a></td>
+                           <td class='docblock short'>
+                                <p>Revision version number</p>
+                           </td>
+                       </tr></table><h2 id='functions' class='section-header'><a href="#functions">Functions</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.SQUASH_VERSION.html'
+                                  title='squash_sys::SQUASH_VERSION'>SQUASH_VERSION</a></td>
+                           <td class='docblock short'>
+                                <p>Encode the major, minor, and revisions into a single number</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.SQUASH_VERSION_EXTRACT_MAJOR.html'
+                                  title='squash_sys::SQUASH_VERSION_EXTRACT_MAJOR'>SQUASH_VERSION_EXTRACT_MAJOR</a></td>
+                           <td class='docblock short'>
+                                <p>Extract the major version number from an encoded version</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.SQUASH_VERSION_EXTRACT_MINOR.html'
+                                  title='squash_sys::SQUASH_VERSION_EXTRACT_MINOR'>SQUASH_VERSION_EXTRACT_MINOR</a></td>
+                           <td class='docblock short'>
+                                <p>Extract the minor version number from an encoded version</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.SQUASH_VERSION_EXTRACT_REVISION.html'
+                                  title='squash_sys::SQUASH_VERSION_EXTRACT_REVISION'>SQUASH_VERSION_EXTRACT_REVISION</a></td>
+                           <td class='docblock short'>
+                                <p>Extract the revision number from an encoded version</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_aligned_alloc.html'
+                                  title='squash_sys::squash_aligned_alloc'>squash_aligned_alloc</a></td>
+                           <td class='docblock short'>
+                                <p>Allocate an aligned buffer</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_aligned_free.html'
+                                  title='squash_sys::squash_aligned_free'>squash_aligned_free</a></td>
+                           <td class='docblock short'>
+                                <p>Deallocate an aligned buffer</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_calloc.html'
+                                  title='squash_sys::squash_calloc'>squash_calloc</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_codec_compress.html'
+                                  title='squash_sys::squash_codec_compress'>squash_codec_compress</a></td>
+                           <td class='docblock short'>
+                                <p>Compress a buffer.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_codec_compress_with_options.html'
+                                  title='squash_sys::squash_codec_compress_with_options'>squash_codec_compress_with_options</a></td>
+                           <td class='docblock short'>
+                                <p>Compress a buffer with an existing SquashOptions.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_codec_create_stream.html'
+                                  title='squash_sys::squash_codec_create_stream'>squash_codec_create_stream</a></td>
+                           <td class='docblock short'>
+                                <p>Create a new stream.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_codec_create_stream_with_options.html'
+                                  title='squash_sys::squash_codec_create_stream_with_options'>squash_codec_create_stream_with_options</a></td>
+                           <td class='docblock short'>
+                                <p>Create a new stream with existing SquashOptions.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_codec_decompress.html'
+                                  title='squash_sys::squash_codec_decompress'>squash_codec_decompress</a></td>
+                           <td class='docblock short'>
+                                <p>Decompress a buffer.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_codec_decompress_with_options.html'
+                                  title='squash_sys::squash_codec_decompress_with_options'>squash_codec_decompress_with_options</a></td>
+                           <td class='docblock short'>
+                                <p>Decompress a buffer with an existing SquashOptions.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_codec_get_context.html'
+                                  title='squash_sys::squash_codec_get_context'>squash_codec_get_context</a></td>
+                           <td class='docblock short'>
+                                <p>Get the context associated with a codec.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_codec_get_extension.html'
+                                  title='squash_sys::squash_codec_get_extension'>squash_codec_get_extension</a></td>
+                           <td class='docblock short'>
+                                <p>Get the codec&#39;s extension.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_codec_get_impl.html'
+                                  title='squash_sys::squash_codec_get_impl'>squash_codec_get_impl</a></td>
+                           <td class='docblock short'>
+                                <p>Get the codec&#39;s function table.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_codec_get_info.html'
+                                  title='squash_sys::squash_codec_get_info'>squash_codec_get_info</a></td>
+                           <td class='docblock short'>
+                                <p>Get a bitmask of information about the codec.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_codec_get_max_compressed_size.html'
+                                  title='squash_sys::squash_codec_get_max_compressed_size'>squash_codec_get_max_compressed_size</a></td>
+                           <td class='docblock short'>
+                                <p>Get the maximum buffer size necessary to store compressed data.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_codec_get_name.html'
+                                  title='squash_sys::squash_codec_get_name'>squash_codec_get_name</a></td>
+                           <td class='docblock short'>
+                                <p>Get the name of a SquashCodec.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_codec_get_option_info.html'
+                                  title='squash_sys::squash_codec_get_option_info'>squash_codec_get_option_info</a></td>
+                           <td class='docblock short'>
+                                <p>Get a list of options applicable to the codec.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_codec_get_plugin.html'
+                                  title='squash_sys::squash_codec_get_plugin'>squash_codec_get_plugin</a></td>
+                           <td class='docblock short'>
+                                <p>Get the plugin associated with a codec.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_codec_get_priority.html'
+                                  title='squash_sys::squash_codec_get_priority'>squash_codec_get_priority</a></td>
+                           <td class='docblock short'>
+                                <p>Get the priority of a SquashCodec.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_codec_get_uncompressed_size.html'
+                                  title='squash_sys::squash_codec_get_uncompressed_size'>squash_codec_get_uncompressed_size</a></td>
+                           <td class='docblock short'>
+                                <p>Get the uncompressed size of the compressed buffer.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_codec_init.html'
+                                  title='squash_sys::squash_codec_init'>squash_codec_init</a></td>
+                           <td class='docblock short'>
+                                <p>Initialize a codec.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_context_foreach_codec.html'
+                                  title='squash_sys::squash_context_foreach_codec'>squash_context_foreach_codec</a></td>
+                           <td class='docblock short'>
+                                <p>Execute a callback for every loaded codec.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_context_foreach_plugin.html'
+                                  title='squash_sys::squash_context_foreach_plugin'>squash_context_foreach_plugin</a></td>
+                           <td class='docblock short'>
+                                <p>Execute a callback for every loaded plugin.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_context_get_codec.html'
+                                  title='squash_sys::squash_context_get_codec'>squash_context_get_codec</a></td>
+                           <td class='docblock short'>
+                                <p>Retrieve a <code>SquashCodec</code> from a <code>SquashContext</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_context_get_codec_from_extension.html'
+                                  title='squash_sys::squash_context_get_codec_from_extension'>squash_context_get_codec_from_extension</a></td>
+                           <td class='docblock short'>
+                                <p>Retrieve a codec from a context based on an extension.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_context_get_default.html'
+                                  title='squash_sys::squash_context_get_default'>squash_context_get_default</a></td>
+                           <td class='docblock short'>
+                                <p>Retrieve the default <code>SquashContext</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_context_get_plugin.html'
+                                  title='squash_sys::squash_context_get_plugin'>squash_context_get_plugin</a></td>
+                           <td class='docblock short'>
+                                <p>Retrieve a SquashPlugin from a <code>SquashContext</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_error.html'
+                                  title='squash_sys::squash_error'>squash_error</a></td>
+                           <td class='docblock short'>
+                                <p>Emit an error.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_file_close.html'
+                                  title='squash_sys::squash_file_close'>squash_file_close</a></td>
+                           <td class='docblock short'>
+                                <p>Close a file.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_file_eof.html'
+                                  title='squash_sys::squash_file_eof'>squash_file_eof</a></td>
+                           <td class='docblock short'>
+                                <p>Determine whether the <code>file</code> has reached the end of file.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_file_error.html'
+                                  title='squash_sys::squash_file_error'>squash_file_error</a></td>
+                           <td class='docblock short'>
+                                <p>Retrieve the last return value.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_file_flush.html'
+                                  title='squash_sys::squash_file_flush'>squash_file_flush</a></td>
+                           <td class='docblock short'>
+                                <p>Immediately write any buffered data to a file.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_file_flush_unlocked.html'
+                                  title='squash_sys::squash_file_flush_unlocked'>squash_file_flush_unlocked</a></td>
+                           <td class='docblock short'>
+                                <p>Immediately write any buffered data to a file without
+acquiring the lock</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_file_free.html'
+                                  title='squash_sys::squash_file_free'>squash_file_free</a></td>
+                           <td class='docblock short'>
+                                <p>Free a file.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_file_lock.html'
+                                  title='squash_sys::squash_file_lock'>squash_file_lock</a></td>
+                           <td class='docblock short'>
+                                <p>Acquire the lock on a file.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_file_open.html'
+                                  title='squash_sys::squash_file_open'>squash_file_open</a></td>
+                           <td class='docblock short'>
+                                <p>Open a file.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_file_open_with_options.html'
+                                  title='squash_sys::squash_file_open_with_options'>squash_file_open_with_options</a></td>
+                           <td class='docblock short'>
+                                <p>Open a file using a with the specified options.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_file_printf.html'
+                                  title='squash_sys::squash_file_printf'>squash_file_printf</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_file_read.html'
+                                  title='squash_sys::squash_file_read'>squash_file_read</a></td>
+                           <td class='docblock short'>
+                                <p>Read from a compressed file.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_file_read_unlocked.html'
+                                  title='squash_sys::squash_file_read_unlocked'>squash_file_read_unlocked</a></td>
+                           <td class='docblock short'>
+                                <p>Read from a compressed file.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_file_steal.html'
+                                  title='squash_sys::squash_file_steal'>squash_file_steal</a></td>
+                           <td class='docblock short'>
+                                <p>Open a file using a with the specified options.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_file_steal_with_options.html'
+                                  title='squash_sys::squash_file_steal_with_options'>squash_file_steal_with_options</a></td>
+                           <td class='docblock short'>
+                                <p>Open an existing stdio file with the specified options.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_file_unlock.html'
+                                  title='squash_sys::squash_file_unlock'>squash_file_unlock</a></td>
+                           <td class='docblock short'>
+                                <p>Release the lock on a file.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_file_write.html'
+                                  title='squash_sys::squash_file_write'>squash_file_write</a></td>
+                           <td class='docblock short'>
+                                <p>Write data to a compressed file.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_file_write_unlocked.html'
+                                  title='squash_sys::squash_file_write_unlocked'>squash_file_write_unlocked</a></td>
+                           <td class='docblock short'>
+                                <p>Write data to a compressed file without acquiring the lock.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_foreach_codec.html'
+                                  title='squash_sys::squash_foreach_codec'>squash_foreach_codec</a></td>
+                           <td class='docblock short'>
+                                <p>Execute a callback for every loaded codec in the default context.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_foreach_plugin.html'
+                                  title='squash_sys::squash_foreach_plugin'>squash_foreach_plugin</a></td>
+                           <td class='docblock short'>
+                                <p>Execute a callback for every loaded plugin in the default context.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_free.html'
+                                  title='squash_sys::squash_free'>squash_free</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_get_codec.html'
+                                  title='squash_sys::squash_get_codec'>squash_get_codec</a></td>
+                           <td class='docblock short'>
+                                <p>Retrieve a SquashCodec.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_get_codec_from_extension.html'
+                                  title='squash_sys::squash_get_codec_from_extension'>squash_get_codec_from_extension</a></td>
+                           <td class='docblock short'>
+                                <p>Retrieve a codec based on an extension.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_get_plugin.html'
+                                  title='squash_sys::squash_get_plugin'>squash_get_plugin</a></td>
+                           <td class='docblock short'>
+                                <p>Retrieve a SquashPlugin.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_license_from_string.html'
+                                  title='squash_sys::squash_license_from_string'>squash_license_from_string</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_license_to_string.html'
+                                  title='squash_sys::squash_license_to_string'>squash_license_to_string</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_malloc.html'
+                                  title='squash_sys::squash_malloc'>squash_malloc</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_object_destroy.html'
+                                  title='squash_sys::squash_object_destroy'>squash_object_destroy</a></td>
+                           <td class='docblock short'>
+                                <p>Destroy an object.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_object_get_ref_count.html'
+                                  title='squash_sys::squash_object_get_ref_count'>squash_object_get_ref_count</a></td>
+                           <td class='docblock short'>
+                                <p>Get the current reference count of an object.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_object_init.html'
+                                  title='squash_sys::squash_object_init'>squash_object_init</a></td>
+                           <td class='docblock short'>
+                                <p>Initialize a new object.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_object_ref.html'
+                                  title='squash_sys::squash_object_ref'>squash_object_ref</a></td>
+                           <td class='docblock short'>
+                                <p>Increment the reference count on an object.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_object_ref_sink.html'
+                                  title='squash_sys::squash_object_ref_sink'>squash_object_ref_sink</a></td>
+                           <td class='docblock short'>
+                                <p>Sink a floating reference if one exists.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_object_unref.html'
+                                  title='squash_sys::squash_object_unref'>squash_object_unref</a></td>
+                           <td class='docblock short'>
+                                <p>Decrement the reference count on an object.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_options_destroy.html'
+                                  title='squash_sys::squash_options_destroy'>squash_options_destroy</a></td>
+                           <td class='docblock short'>
+                                <p>Destroy a SquashOptions instance.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_options_get_bool.html'
+                                  title='squash_sys::squash_options_get_bool'>squash_options_get_bool</a></td>
+                           <td class='docblock short'>
+                                <p>Retrieve the value of a boolean option</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_options_get_bool_at.html'
+                                  title='squash_sys::squash_options_get_bool_at'>squash_options_get_bool_at</a></td>
+                           <td class='docblock short'>
+                                <p>Retrieve the value of a boolean option</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_options_get_int.html'
+                                  title='squash_sys::squash_options_get_int'>squash_options_get_int</a></td>
+                           <td class='docblock short'>
+                                <p>Retrieve the value of an integer option</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_options_get_int_at.html'
+                                  title='squash_sys::squash_options_get_int_at'>squash_options_get_int_at</a></td>
+                           <td class='docblock short'>
+                                <p>Retrieve the value of an int option</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_options_get_size.html'
+                                  title='squash_sys::squash_options_get_size'>squash_options_get_size</a></td>
+                           <td class='docblock short'>
+                                <p>Retrieve the value of a size option</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_options_get_size_at.html'
+                                  title='squash_sys::squash_options_get_size_at'>squash_options_get_size_at</a></td>
+                           <td class='docblock short'>
+                                <p>Retrieve the value of a size option</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_options_get_string.html'
+                                  title='squash_sys::squash_options_get_string'>squash_options_get_string</a></td>
+                           <td class='docblock short'>
+                                <p>Retrieve the value of a string option</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_options_get_string_at.html'
+                                  title='squash_sys::squash_options_get_string_at'>squash_options_get_string_at</a></td>
+                           <td class='docblock short'>
+                                <p>Retrieve the value of a string option</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_options_init.html'
+                                  title='squash_sys::squash_options_init'>squash_options_init</a></td>
+                           <td class='docblock short'>
+                                <p>Initialize a new <code>SquashOptions</code> instance.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_options_new.html'
+                                  title='squash_sys::squash_options_new'>squash_options_new</a></td>
+                           <td class='docblock short'>
+                                <p>Create a new group of options.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_options_newa.html'
+                                  title='squash_sys::squash_options_newa'>squash_options_newa</a></td>
+                           <td class='docblock short'>
+                                <p>Create a new group of options from key and value arrays.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_options_parse.html'
+                                  title='squash_sys::squash_options_parse'>squash_options_parse</a></td>
+                           <td class='docblock short'>
+                                <p>Parse a variadic list of options.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_options_parse_option.html'
+                                  title='squash_sys::squash_options_parse_option'>squash_options_parse_option</a></td>
+                           <td class='docblock short'>
+                                <p>Parse a single option.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_options_parsea.html'
+                                  title='squash_sys::squash_options_parsea'>squash_options_parsea</a></td>
+                           <td class='docblock short'>
+                                <p>Parse an array of options.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_options_set_bool.html'
+                                  title='squash_sys::squash_options_set_bool'>squash_options_set_bool</a></td>
+                           <td class='docblock short'>
+                                <p>Set the value of a bool option.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_options_set_bool_at.html'
+                                  title='squash_sys::squash_options_set_bool_at'>squash_options_set_bool_at</a></td>
+                           <td class='docblock short'>
+                                <p>Set the value of a bool option at the given <code>index</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_options_set_int.html'
+                                  title='squash_sys::squash_options_set_int'>squash_options_set_int</a></td>
+                           <td class='docblock short'>
+                                <p>Set the value of a int option.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_options_set_int_at.html'
+                                  title='squash_sys::squash_options_set_int_at'>squash_options_set_int_at</a></td>
+                           <td class='docblock short'>
+                                <p>Set the value of a int option at the given index.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_options_set_size.html'
+                                  title='squash_sys::squash_options_set_size'>squash_options_set_size</a></td>
+                           <td class='docblock short'>
+                                <p>Set the value of a size option.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_options_set_size_at.html'
+                                  title='squash_sys::squash_options_set_size_at'>squash_options_set_size_at</a></td>
+                           <td class='docblock short'>
+                                <p>Set the value of a size option at the given index.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_options_set_string.html'
+                                  title='squash_sys::squash_options_set_string'>squash_options_set_string</a></td>
+                           <td class='docblock short'>
+                                <p>Set the value of a string option.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_options_set_string_at.html'
+                                  title='squash_sys::squash_options_set_string_at'>squash_options_set_string_at</a></td>
+                           <td class='docblock short'>
+                                <p>Set the value of a string option at the given index.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_plugin_foreach_codec.html'
+                                  title='squash_sys::squash_plugin_foreach_codec'>squash_plugin_foreach_codec</a></td>
+                           <td class='docblock short'>
+                                <p>Execute a callback for every codec in the plugin.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_plugin_get_codec.html'
+                                  title='squash_sys::squash_plugin_get_codec'>squash_plugin_get_codec</a></td>
+                           <td class='docblock short'>
+                                <p>Get a codec from a plugin by name.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_plugin_get_licences.html'
+                                  title='squash_sys::squash_plugin_get_licences'>squash_plugin_get_licences</a></td>
+                           <td class='docblock short'>
+                                <p>Get the licenses of the plugin.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_plugin_get_name.html'
+                                  title='squash_sys::squash_plugin_get_name'>squash_plugin_get_name</a></td>
+                           <td class='docblock short'>
+                                <p>Get the name of a plugin.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_plugin_init.html'
+                                  title='squash_sys::squash_plugin_init'>squash_plugin_init</a></td>
+                           <td class='docblock short'>
+                                <p>Load a SquashPlugin</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_realloc.html'
+                                  title='squash_sys::squash_realloc'>squash_realloc</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_set_default_search_path.html'
+                                  title='squash_sys::squash_set_default_search_path'>squash_set_default_search_path</a></td>
+                           <td class='docblock short'>
+                                <p>Set the default search path for plugins.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_set_memory_functions.html'
+                                  title='squash_sys::squash_set_memory_functions'>squash_set_memory_functions</a></td>
+                           <td class='docblock short'>
+                                <p>Set memory management functions</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_splice.html'
+                                  title='squash_sys::squash_splice'>squash_splice</a></td>
+                           <td class='docblock short'>
+                                <p>Compress or decompress the contents of one file to another</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_splice_custom.html'
+                                  title='squash_sys::squash_splice_custom'>squash_splice_custom</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_splice_custom_with_options.html'
+                                  title='squash_sys::squash_splice_custom_with_options'>squash_splice_custom_with_options</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_splice_with_options.html'
+                                  title='squash_sys::squash_splice_with_options'>squash_splice_with_options</a></td>
+                           <td class='docblock short'>
+                                <p>compress or decompress the contents of one file to another</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_status_to_string.html'
+                                  title='squash_sys::squash_status_to_string'>squash_status_to_string</a></td>
+                           <td class='docblock short'>
+                                <p>Get a string representation of a status code.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_stream_destroy.html'
+                                  title='squash_sys::squash_stream_destroy'>squash_stream_destroy</a></td>
+                           <td class='docblock short'>
+                                <p>Destroy a stream.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_stream_finish.html'
+                                  title='squash_sys::squash_stream_finish'>squash_stream_finish</a></td>
+                           <td class='docblock short'>
+                                <p>Finish writing to a stream.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_stream_flush.html'
+                                  title='squash_sys::squash_stream_flush'>squash_stream_flush</a></td>
+                           <td class='docblock short'>
+                                <p>Flush a stream.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_stream_init.html'
+                                  title='squash_sys::squash_stream_init'>squash_stream_init</a></td>
+                           <td class='docblock short'>
+                                <p>Initialize a stream.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_stream_new.html'
+                                  title='squash_sys::squash_stream_new'>squash_stream_new</a></td>
+                           <td class='docblock short'>
+                                <p>Create a new stream with options.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_stream_new_with_options.html'
+                                  title='squash_sys::squash_stream_new_with_options'>squash_stream_new_with_options</a></td>
+                           <td class='docblock short'>
+                                <p>Create a new stream with an options instance.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_stream_newa.html'
+                                  title='squash_sys::squash_stream_newa'>squash_stream_newa</a></td>
+                           <td class='docblock short'>
+                                <p>Create a new stream with key/value option arrays.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_stream_process.html'
+                                  title='squash_sys::squash_stream_process'>squash_stream_process</a></td>
+                           <td class='docblock short'>
+                                <p>Process a stream.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_version.html'
+                                  title='squash_sys::squash_version'>squash_version</a></td>
+                           <td class='docblock short'>
+                                <p>Get the library version.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.squash_version_api.html'
+                                  title='squash_sys::squash_version_api'>squash_version_api</a></td>
+                           <td class='docblock short'>
+                                <p>Get the API version.</p>
+                           </td>
+                       </tr></table><h2 id='types' class='section-header'><a href="#types">Type Definitions</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.SquashCodecForeachFunc.html'
+                                  title='squash_sys::SquashCodecForeachFunc'>SquashCodecForeachFunc</a></td>
+                           <td class='docblock short'>
+                                <p>Callback to be invoked on each SquashCodec in a set.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.SquashDestroyNotify.html'
+                                  title='squash_sys::SquashDestroyNotify'>SquashDestroyNotify</a></td>
+                           <td class='docblock short'>
+                                <p>Callback to be invoked when information data is no longer needed.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.SquashOptionType.html'
+                                  title='squash_sys::SquashOptionType'>SquashOptionType</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.SquashPluginForeachFunc.html'
+                                  title='squash_sys::SquashPluginForeachFunc'>SquashPluginForeachFunc</a></td>
+                           <td class='docblock short'>
+                                <p>Callback to be invoked on each SquashPlugin in a set.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.SquashReadFunc.html'
+                                  title='squash_sys::SquashReadFunc'>SquashReadFunc</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.SquashStatus.html'
+                                  title='squash_sys::SquashStatus'>SquashStatus</a></td>
+                           <td class='docblock short'>
+                                <p>Response status codes.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.SquashStreamState.html'
+                                  title='squash_sys::SquashStreamState'>SquashStreamState</a></td>
+                           <td class='docblock short'>
+                                <p>State the stream is in.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.SquashWriteFunc.html'
+                                  title='squash_sys::SquashWriteFunc'>SquashWriteFunc</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr></table></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "squash_sys";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../jquery.js"></script>
+    <script src="../main.js"></script>
+    
+    <script defer src="../search-index.js"></script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+initSidebarItems({"constant":[["SQUASH_SPLICE_BUF_SIZE",""]],"fn":[["squash_splice","Compress or decompress the contents of one file to another"],["squash_splice_custom",""],["squash_splice_custom_with_options",""],["squash_splice_with_options","compress or decompress the contents of one file to another"]]});
